@@ -2,20 +2,20 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 class Calculator2Test {
 
-    public int nbErrors = 0;
+    //public int nbErrors = 0;
     @Test
     public void testAdd() {
-        Calculator calculator = new Calculator();
+        Calculator2 calculator = new Calculator2();
         double result = calculator.add(10, 50);
         assertEquals(60, result, 0);
     }
 }
 public class Calculator2 {
     public double add(double number1, double number2) {
-        return number1 + number2;
+        return number1 - number2;
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Calculator2Test test = new Calculator2Test();
         try {
             test.testAdd();
@@ -27,5 +27,5 @@ public class Calculator2 {
         if (test.nbErrors > 0) {
             throw new IllegalStateException("Hay " + test.nbErrors + " error(s)");
         }
-    }
+    }*/
 }
