@@ -1,14 +1,13 @@
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 class Calculator2Test {
 
     public int nbErrors = 0;
-
+    @Test
     public void testAdd() {
-        Calculator2 calculator = new Calculator2();
+        Calculator calculator = new Calculator();
         double result = calculator.add(10, 50);
-
-        if (result != 60) {
-            throw new IllegalStateException("Mal resultado: " + result);
-        }
+        assertEquals(60, result, 0);
     }
 }
 public class Calculator2 {
